@@ -1,0 +1,1309 @@
+version: '3'
+
+services:
+
+  container_bus0:
+    image: 26_business
+    command: ["python", "Business.py", "b1000", "20000"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.1
+    ports:
+      - "20000:20000"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus1:
+    image: 26_business
+    command: ["python", "Business.py", "b1001", "20001"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.2
+    ports:
+      - "20001:20001"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus2:
+    image: 26_business
+    command: ["python", "Business.py", "b1002", "20002"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.3
+    ports:
+      - "20002:20002"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus3:
+    image: 26_business
+    command: ["python", "Business.py", "b1003", "20003"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.4
+    ports:
+      - "20003:20003"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus4:
+    image: 26_business
+    command: ["python", "Business.py", "b1004", "20004"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.5
+    ports:
+      - "20004:20004"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus5:
+    image: 26_business
+    command: ["python", "Business.py", "b1005", "20005"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.6
+    ports:
+      - "20005:20005"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus6:
+    image: 26_business
+    command: ["python", "Business.py", "b1006", "20006"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.7
+    ports:
+      - "20006:20006"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus7:
+    image: 26_business
+    command: ["python", "Business.py", "b1007", "20007"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.8
+    ports:
+      - "20007:20007"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus8:
+    image: 26_business
+    command: ["python", "Business.py", "b1008", "20008"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.9
+    ports:
+      - "20008:20008"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus9:
+    image: 26_business
+    command: ["python", "Business.py", "b1009", "20009"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.10
+    ports:
+      - "20009:20009"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus10:
+    image: 26_business
+    command: ["python", "Business.py", "b1010", "20010"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.11
+    ports:
+      - "20010:20010"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus11:
+    image: 26_business
+    command: ["python", "Business.py", "b1011", "20011"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.12
+    ports:
+      - "20011:20011"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus12:
+    image: 26_business
+    command: ["python", "Business.py", "b1012", "20012"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.13
+    ports:
+      - "20012:20012"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus13:
+    image: 26_business
+    command: ["python", "Business.py", "b1013", "20013"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.14
+    ports:
+      - "20013:20013"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus14:
+    image: 26_business
+    command: ["python", "Business.py", "b1014", "20014"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.15
+    ports:
+      - "20014:20014"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus15:
+    image: 26_business
+    command: ["python", "Business.py", "b1015", "20015"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.16
+    ports:
+      - "20015:20015"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus16:
+    image: 26_business
+    command: ["python", "Business.py", "b1016", "20016"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.17
+    ports:
+      - "20016:20016"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus17:
+    image: 26_business
+    command: ["python", "Business.py", "b1017", "20017"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.18
+    ports:
+      - "20017:20017"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus18:
+    image: 26_business
+    command: ["python", "Business.py", "b1018", "20018"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.19
+    ports:
+      - "20018:20018"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus19:
+    image: 26_business
+    command: ["python", "Business.py", "b1019", "20019"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.20
+    ports:
+      - "20019:20019"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus20:
+    image: 26_business
+    command: ["python", "Business.py", "b1020", "20020"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.21
+    ports:
+      - "20020:20020"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus21:
+    image: 26_business
+    command: ["python", "Business.py", "b1021", "20021"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.22
+    ports:
+      - "20021:20021"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus22:
+    image: 26_business
+    command: ["python", "Business.py", "b1022", "20022"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.23
+    ports:
+      - "20022:20022"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus23:
+    image: 26_business
+    command: ["python", "Business.py", "b1023", "20023"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.24
+    ports:
+      - "20023:20023"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus24:
+    image: 26_business
+    command: ["python", "Business.py", "b1024", "20024"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.25
+    ports:
+      - "20024:20024"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus25:
+    image: 26_business
+    command: ["python", "Business.py", "b1025", "20025"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.26
+    ports:
+      - "20025:20025"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus26:
+    image: 26_business
+    command: ["python", "Business.py", "b1026", "20026"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.27
+    ports:
+      - "20026:20026"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus27:
+    image: 26_business
+    command: ["python", "Business.py", "b1027", "20027"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.28
+    ports:
+      - "20027:20027"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus28:
+    image: 26_business
+    command: ["python", "Business.py", "b1028", "20028"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.29
+    ports:
+      - "20028:20028"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus29:
+    image: 26_business
+    command: ["python", "Business.py", "b1029", "20029"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.30
+    ports:
+      - "20029:20029"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus30:
+    image: 26_business
+    command: ["python", "Business.py", "b1030", "20030"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.31
+    ports:
+      - "20030:20030"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus31:
+    image: 26_business
+    command: ["python", "Business.py", "b1031", "20031"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.32
+    ports:
+      - "20031:20031"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus32:
+    image: 26_business
+    command: ["python", "Business.py", "b1032", "20032"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.33
+    ports:
+      - "20032:20032"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus33:
+    image: 26_business
+    command: ["python", "Business.py", "b1033", "20033"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.34
+    ports:
+      - "20033:20033"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus34:
+    image: 26_business
+    command: ["python", "Business.py", "b1034", "20034"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.35
+    ports:
+      - "20034:20034"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus35:
+    image: 26_business
+    command: ["python", "Business.py", "b1035", "20035"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.36
+    ports:
+      - "20035:20035"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus36:
+    image: 26_business
+    command: ["python", "Business.py", "b1036", "20036"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.37
+    ports:
+      - "20036:20036"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus37:
+    image: 26_business
+    command: ["python", "Business.py", "b1037", "20037"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.38
+    ports:
+      - "20037:20037"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus38:
+    image: 26_business
+    command: ["python", "Business.py", "b1038", "20038"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.39
+    ports:
+      - "20038:20038"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus39:
+    image: 26_business
+    command: ["python", "Business.py", "b1039", "20039"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.40
+    ports:
+      - "20039:20039"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus40:
+    image: 26_business
+    command: ["python", "Business.py", "b1040", "20040"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.41
+    ports:
+      - "20040:20040"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus41:
+    image: 26_business
+    command: ["python", "Business.py", "b1041", "20041"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.42
+    ports:
+      - "20041:20041"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus42:
+    image: 26_business
+    command: ["python", "Business.py", "b1042", "20042"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.43
+    ports:
+      - "20042:20042"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus43:
+    image: 26_business
+    command: ["python", "Business.py", "b1043", "20043"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.44
+    ports:
+      - "20043:20043"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus44:
+    image: 26_business
+    command: ["python", "Business.py", "b1044", "20044"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.45
+    ports:
+      - "20044:20044"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus45:
+    image: 26_business
+    command: ["python", "Business.py", "b1045", "20045"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.46
+    ports:
+      - "20045:20045"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus46:
+    image: 26_business
+    command: ["python", "Business.py", "b1046", "20046"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.47
+    ports:
+      - "20046:20046"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus47:
+    image: 26_business
+    command: ["python", "Business.py", "b1047", "20047"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.48
+    ports:
+      - "20047:20047"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus48:
+    image: 26_business
+    command: ["python", "Business.py", "b1048", "20048"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.49
+    ports:
+      - "20048:20048"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus49:
+    image: 26_business
+    command: ["python", "Business.py", "b1049", "20049"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.50
+    ports:
+      - "20049:20049"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus50:
+    image: 26_business
+    command: ["python", "Business.py", "b1050", "20050"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.51
+    ports:
+      - "20050:20050"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus51:
+    image: 26_business
+    command: ["python", "Business.py", "b1051", "20051"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.52
+    ports:
+      - "20051:20051"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus52:
+    image: 26_business
+    command: ["python", "Business.py", "b1052", "20052"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.53
+    ports:
+      - "20052:20052"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus53:
+    image: 26_business
+    command: ["python", "Business.py", "b1053", "20053"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.54
+    ports:
+      - "20053:20053"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus54:
+    image: 26_business
+    command: ["python", "Business.py", "b1054", "20054"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.55
+    ports:
+      - "20054:20054"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus55:
+    image: 26_business
+    command: ["python", "Business.py", "b1055", "20055"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.56
+    ports:
+      - "20055:20055"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus56:
+    image: 26_business
+    command: ["python", "Business.py", "b1056", "20056"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.57
+    ports:
+      - "20056:20056"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus57:
+    image: 26_business
+    command: ["python", "Business.py", "b1057", "20057"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.58
+    ports:
+      - "20057:20057"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus58:
+    image: 26_business
+    command: ["python", "Business.py", "b1058", "20058"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.59
+    ports:
+      - "20058:20058"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus59:
+    image: 26_business
+    command: ["python", "Business.py", "b1059", "20059"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.60
+    ports:
+      - "20059:20059"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus60:
+    image: 26_business
+    command: ["python", "Business.py", "b1060", "20060"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.61
+    ports:
+      - "20060:20060"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus61:
+    image: 26_business
+    command: ["python", "Business.py", "b1061", "20061"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.62
+    ports:
+      - "20061:20061"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus62:
+    image: 26_business
+    command: ["python", "Business.py", "b1062", "20062"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.63
+    ports:
+      - "20062:20062"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus63:
+    image: 26_business
+    command: ["python", "Business.py", "b1063", "20063"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.64
+    ports:
+      - "20063:20063"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus64:
+    image: 26_business
+    command: ["python", "Business.py", "b1064", "20064"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.65
+    ports:
+      - "20064:20064"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus65:
+    image: 26_business
+    command: ["python", "Business.py", "b1065", "20065"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.66
+    ports:
+      - "20065:20065"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus66:
+    image: 26_business
+    command: ["python", "Business.py", "b1066", "20066"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.67
+    ports:
+      - "20066:20066"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus67:
+    image: 26_business
+    command: ["python", "Business.py", "b1067", "20067"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.68
+    ports:
+      - "20067:20067"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus68:
+    image: 26_business
+    command: ["python", "Business.py", "b1068", "20068"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.69
+    ports:
+      - "20068:20068"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus69:
+    image: 26_business
+    command: ["python", "Business.py", "b1069", "20069"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.70
+    ports:
+      - "20069:20069"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus70:
+    image: 26_business
+    command: ["python", "Business.py", "b1070", "20070"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.71
+    ports:
+      - "20070:20070"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus71:
+    image: 26_business
+    command: ["python", "Business.py", "b1071", "20071"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.72
+    ports:
+      - "20071:20071"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus72:
+    image: 26_business
+    command: ["python", "Business.py", "b1072", "20072"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.73
+    ports:
+      - "20072:20072"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus73:
+    image: 26_business
+    command: ["python", "Business.py", "b1073", "20073"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.74
+    ports:
+      - "20073:20073"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus74:
+    image: 26_business
+    command: ["python", "Business.py", "b1074", "20074"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.75
+    ports:
+      - "20074:20074"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus75:
+    image: 26_business
+    command: ["python", "Business.py", "b1075", "20075"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.76
+    ports:
+      - "20075:20075"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus76:
+    image: 26_business
+    command: ["python", "Business.py", "b1076", "20076"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.77
+    ports:
+      - "20076:20076"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus77:
+    image: 26_business
+    command: ["python", "Business.py", "b1077", "20077"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.78
+    ports:
+      - "20077:20077"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus78:
+    image: 26_business
+    command: ["python", "Business.py", "b1078", "20078"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.79
+    ports:
+      - "20078:20078"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus79:
+    image: 26_business
+    command: ["python", "Business.py", "b1079", "20079"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.80
+    ports:
+      - "20079:20079"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus80:
+    image: 26_business
+    command: ["python", "Business.py", "b1080", "20080"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.81
+    ports:
+      - "20080:20080"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus81:
+    image: 26_business
+    command: ["python", "Business.py", "b1081", "20081"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.82
+    ports:
+      - "20081:20081"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus82:
+    image: 26_business
+    command: ["python", "Business.py", "b1082", "20082"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.83
+    ports:
+      - "20082:20082"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus83:
+    image: 26_business
+    command: ["python", "Business.py", "b1083", "20083"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.84
+    ports:
+      - "20083:20083"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus84:
+    image: 26_business
+    command: ["python", "Business.py", "b1084", "20084"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.85
+    ports:
+      - "20084:20084"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus85:
+    image: 26_business
+    command: ["python", "Business.py", "b1085", "20085"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.86
+    ports:
+      - "20085:20085"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus86:
+    image: 26_business
+    command: ["python", "Business.py", "b1086", "20086"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.87
+    ports:
+      - "20086:20086"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus87:
+    image: 26_business
+    command: ["python", "Business.py", "b1087", "20087"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.88
+    ports:
+      - "20087:20087"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus88:
+    image: 26_business
+    command: ["python", "Business.py", "b1088", "20088"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.89
+    ports:
+      - "20088:20088"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus89:
+    image: 26_business
+    command: ["python", "Business.py", "b1089", "20089"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.90
+    ports:
+      - "20089:20089"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus90:
+    image: 26_business
+    command: ["python", "Business.py", "b1090", "20090"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.91
+    ports:
+      - "20090:20090"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus91:
+    image: 26_business
+    command: ["python", "Business.py", "b1091", "20091"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.92
+    ports:
+      - "20091:20091"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus92:
+    image: 26_business
+    command: ["python", "Business.py", "b1092", "20092"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.93
+    ports:
+      - "20092:20092"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus93:
+    image: 26_business
+    command: ["python", "Business.py", "b1093", "20093"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.94
+    ports:
+      - "20093:20093"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus94:
+    image: 26_business
+    command: ["python", "Business.py", "b1094", "20094"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.95
+    ports:
+      - "20094:20094"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus95:
+    image: 26_business
+    command: ["python", "Business.py", "b1095", "20095"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.96
+    ports:
+      - "20095:20095"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus96:
+    image: 26_business
+    command: ["python", "Business.py", "b1096", "20096"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.97
+    ports:
+      - "20096:20096"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+  container_bus97:
+    image: 26_business
+    command: ["python", "Business.py", "b1097", "20097"]
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.98
+    ports:
+      - "20097:20097"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_business:/app
+
+
+  container_central:
+    image: 26_central
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.99
+    ports:
+      - "20099:20099"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_central:/app
+
+  container_user:
+    image: user
+    networks:
+      mynetwork:
+        ipv4_address: 192.168.255.100
+    ports:
+      - "30000:30000"
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - /home/dengx/docker_26/docker_user:/app
+
+networks:
+  mynetwork:
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.0.0/16

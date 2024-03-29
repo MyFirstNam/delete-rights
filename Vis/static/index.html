@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>通知动态展示链</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="static/script/socket.io.min.js"></script>
+    <style>
+        .node { stroke: #fff; stroke-width: 1.5px; }
+        .link { stroke: #999; stroke-opacity: 0.6; }
+        .red-link { stroke: red; stroke-opacity: 0.6; }
+        .label { font-size: 12px; }
+        /* 定义闪烁动画 */
+        @keyframes blink {
+            0%   { stroke-opacity: 1; }   /* 开始时，边是完全不透明的 */
+            50%  { stroke-opacity: 0; }   /* 动画中间，边完全透明 */
+            100% { stroke-opacity: 1; }   /* 结束时，边再次不透明 */
+        }
+
+        /* 应用闪烁动画的类 */
+        .blink {
+            animation: blink 1s linear infinite; /* 持续时间1秒，线性速度，无限次重复 */
+        }
+    </style>
+</head>
+<body>
+    <div id="graph"></div>
+
+    <script>
+        var front_first = true
+        const socket = io();
+
+        // 监听后端发送的图数据
+        socket.on('graph_data', function(data) {
+            const graph = JSON.parse(data);
+            document.getElementById('graph').innerHTML = '';
+            console.log(document.getElementById('graph').innerHTML)
+            front_first = true
+            renderGraph(graph);  // 渲染图
+        });
+
+
+        socket.on('edge_status_update', async function (nodeId, first=false) {
+            // 如果 first 为真，则只处理节点并返回
+            if (first || front_first) {
+                node_red(nodeId)
+                front_first = false
+                return
+            }
+
+            // 选择特定的边
+            var selectedEdge = d3.select(`#edge-${nodeId}`);
+
+            // 使用 .empty() 方法检查是否找到了边
+            if (!selectedEdge.empty()) {
+                console.log("已找到该边");
+                // 应用闪烁动画
+                selectedEdge.classed('blink', true);
+
+                // 等待动画完成，这里设置为闪烁 3 秒
+                await sleep_seconds(3);
+
+                // 移除闪烁动画，并改变颜色
+                selectedEdge.classed('blink', false);
+
+                // 更改边的颜色为红色
+                selectedEdge.classed('red-link', true);
+
+                node_red(nodeId)
+            } else {
+                console.log("未找到该边");
+            }
+        });
+
+        // 渲染网络图的函数
+        function renderGraph(graph) {
+            const width = 800, height = 600;
+            // 创建 SVG 容器
+            const svg = d3.select('#graph').append('svg')
+                .attr('width', width)
+                .attr('height', height);
+
+            // 设置力导向图模拟
+            const simulation = d3.forceSimulation(graph.nodes)
+                .force('link', d3.forceLink(graph.links).id(d => d.id).distance(150))  // 增加边的理想长度
+                .force('charge', d3.forceManyBody().strength(-200))  // 增加节点排斥力
+                .force('center', d3.forceCenter(width / 2, height / 2));
+
+            // 绘制图中的边
+            const link = svg.append('g')
+                .selectAll('line')
+                .data(graph.links)
+                .enter().append('line')
+                .attr('class', 'link')
+                .style('stroke-width', 5)
+                .attr('id', function(d) {
+                    return d.id; // 使用 JSON 数据中的 id 属性设置边的 id
+                });
+
+            // 设置颜色比例尺
+            const color = d3.scaleOrdinal(d3.schemeCategory10);
+
+            // 绘制图中的节点
+            const node = svg.append('g')
+                .selectAll('circle')
+                .data(graph.nodes)
+                .enter().append('circle')
+                .attr('r', 20)  // 设置节点大小
+                .attr('fill', d => color(d.group))  // 根据节点组设置颜色
+                .attr('id', function(d) {
+                    return d.id; // 使用 JSON 数据中的 id 属性设置边的 id
+                })
+                .call(d3.drag()  // 应用拖拽行为
+                    .on('start', dragstarted)
+                    .on('drag', dragged)
+                    .on('end', dragended));
+
+            // 在每个节点旁边添加文本标签
+            const label = svg.append('g')
+                .attr('class', 'labels')
+                .selectAll('text')
+                .data(graph.nodes)
+                .enter().append('text')
+                .attr('class', 'label')
+                .text(d => d.id);  // 设置文本内容为节点 ID
+
+            // 力导向图每次迭代时更新元素位置
+            simulation.on('tick', () => {
+                link
+                    .attr('x1', d => d.source.x)
+                    .attr('y1', d => d.source.y)
+                    .attr('x2', d => d.target.x)
+                    .attr('y2', d => d.target.y);
+
+                node
+                    .attr('cx', d => d.x)
+                    .attr('cy', d => d.y);
+
+                // 更新文本标签的位置，使其紧随节点
+                label
+                    .attr('x', d => d.x + 6)
+                    .attr('y', d => d.y + 3);
+            });
+
+            // 定义拖拽开始时的行为
+            function dragstarted(event, d) {
+                if (!event.active) simulation.alphaTarget(0.3).restart();
+                d.fx = d.x;
+                d.fy = d.y;
+            }
+
+            // 定义拖拽进行中的行为
+            function dragged(event, d) {
+                d.fx = event.x;
+                d.fy = event.y;
+            }
+
+            // 定义拖拽结束时的行为
+            function dragended(event, d) {
+                if (!event.active) simulation.alphaTarget(0);
+                d.fx = null;
+                d.fy = null;
+            }
+        }
+        function sleep_seconds(s) {
+            return new Promise(resolve => setTimeout(resolve, 1000*s));
+        }
+
+        async function node_red(nodeId) {
+            // 选择特定的节点
+            var selectedElement = d3.select(`#${nodeId}`);
+            // 使用 .empty() 方法检查是否找到了元素
+            if (!selectedElement.empty()) {
+                // 找到了元素
+                console.log("已找到该元素");
+                await sleep_seconds(1)
+                // 可以在这里执行您的操作，例如更改样式
+                selectedElement.attr('fill', 'red');
+            } else {
+                // 未找到元素
+                console.log("未找到该元素");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="systemTest.TestSendInfo-20231024105806" tests="1" file="systemTest.py" time="0.012" timestamp="2023-10-24T10:58:06" failures="0" errors="0" skipped="0">
+	<testcase classname="systemTest.TestSendInfo" name="test_send_intent_log" time="0.012" timestamp="2023-10-24T10:58:06" file="systemTest.py" line="15">
+		<system-out><![CDATA[[info] The connection to the database start
+['1', 'b00001']
+POST请求成功
+<MagicMock name='post().text' id='2372304880736'>
+[info] The connection to the database is closed
+]]></system-out>
+	</testcase>
+</testsuite>

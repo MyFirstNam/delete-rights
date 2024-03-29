@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex Form with Horizontal Alignment</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>复杂表单示例</h2>
+        <form id="complexForm">
+            <!-- 文本输入区域 -->
+            <fieldset class="border p-2 mb-3">
+                <legend class="w-auto">文本输入:</legend>
+                <div class="form-group">
+                    <input type="text" class="form-control mb-2" placeholder="输入文本1">
+                    <input type="text" class="form-control mb-2" placeholder="输入文本2">
+                    <input type="text" class="form-control" placeholder="输入文本3">
+                </div>
+            </fieldset>
+
+            <!-- 单选按钮组水平并列 -->
+            <fieldset class="border p-2 mb-3">
+                <legend class="w-auto">单选按钮组:</legend>
+                <div class="row">
+                    <!-- 单选组 1 -->
+                    <div class="col">
+                        <label class="d-block">单选组 1:</label>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio1-1" name="radioGroup1" value="option1-1" checked>
+                            <label class="form-check-label" for="radio1-1">选项 1</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio1-2" name="radioGroup1" value="option1-2">
+                            <label class="form-check-label" for="radio1-2">选项 2</label>
+                        </div>
+                    </div>
+                    <!-- 单选组 2 -->
+                    <div class="col">
+                        <label class="d-block">单选组 2:</label>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio2-1" name="radioGroup2" value="option2-1">
+                            <label class="form-check-label" for="radio2-1">选项 1</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio2-2" name="radioGroup2" value="option2-2" checked>
+                            <label class="form-check-label" for="radio2-2">选项 2</label>
+                        </div>
+                    </div>
+                    <!-- 单选组 3 -->
+                    <div class="col">
+                        <label class="d-block">单选组 3:</label>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio3-1" name="radioGroup3" value="option3-1">
+                            <label class="form-check-label" for="radio3-1">选项 1</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="radio3-2" name="radioGroup3" value="option3-2" checked>
+                            <label class="form-check-label" for="radio3-2">选项 2</label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- 复选框组水平并列 -->
+            <fieldset class="border p-2">
+                <legend class="w-auto">复选框组:</legend>
+                <div class="row">
+                    <!-- 复选组 1 -->
+                    <div class="col">
+                        <label class="d-block">复选组 1:</label>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check1-1">
+                            <label class="form-check-label" for="check1-1">复选 1</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check1-2">
+                            <label class="form-check-label" for="check1-2">复选 2</label>
+                        </div>
+                    </div>
+                    <!-- 复选组 2 -->
+                    <div class="col">
+                        <label class="d-block">复选组 2:</label>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check2-1">
+                            <label class="form-check-label" for="check2-1">复选 1</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check2-2">
+                            <label class="form-check-label" for="check2-2">复选 2</label>
+                        </div>
+                    </div>
+                    <!-- 复选组 3 -->
+                    <div class="col">
+                        <label class="d-block">复选组 3:</label>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check3-1">
+                            <label class="form-check-label" for="check3-1">复选 1</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="check3-2">
+                            <label class="form-check-label" for="check3-2">复选 2</label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <button type="button" class="btn btn-primary mt-3" onclick="saveFormData()">保存数据</button>
+            <button type="submit" class="btn btn-success mt-3" onclick="submitFormData()">提交到后端</button>
+        </form>
+    </div>
+
+    <script>
+        function saveFormData() {
+            // 添加保存表单数据的逻辑
+            alert("表单数据已保存");
+        }
+
+        function submitFormData() {
+            // 添加提交数据到后端的逻辑
+            alert("表单数据已提交到后端");
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
